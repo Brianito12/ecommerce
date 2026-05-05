@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Food Hub | Fast & Delicious Street Food</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <div class="container">
+        <div class="logo">🔥 The Food Hub</div>
+        <nav class="navbar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#shop" class="nav-link">Shop</a>
+            <a href="#why-us" class="nav-link">Why Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#" class="nav-link cart-icon" onclick="toggleCart(event)">🛒 Cart <span class="cart-count">0</span></a>
+        </nav>
+    </div>
+</header>
+
+<!-- Home Section with Banner -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Hot. Fresh. Delicious.</h1>
+        <p class="hero-subtitle">Premium street food delivered to your door via WhatsApp</p>
+        <a href="#shop" class="btn-primary">Order Now</a>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About The Food Hub</h2>
+                <p>Welcome to The Food Hub, where passion meets flavor! Founded with a mission to bring authentic, mouth-watering street food to your table, we've been serving the community for years.</p>
+                <p>Our journey started with a simple dream: to create a space where quality ingredients, traditional recipes, and exceptional service come together. Every meal we prepare is made with love and dedication to ensure you get the best experience possible.</p>
+                <p>We believe in freshness, affordability, and speed. No compromises. Just delicious food that brings joy to your table.</p>
+            </div>
+            <div class="about-image">
+               <img src="images/about-image.jpeg" alt="logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <h2>Why Choose Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Fast Delivery</h3>
+                <p>Quick WhatsApp ordering and speedy service ensures your food arrives hot and fresh within minutes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌟</div>
+                <h3>Quality Ingredients</h3>
+                <p>We source only the freshest ingredients daily to guarantee premium quality in every bite.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💰</div>
+                <h3>Affordable Prices</h3>
+                <p>Enjoy gourmet street food at prices that won't break the bank. Great value for money!</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Easy Ordering</h3>
+                <p>Simple WhatsApp integration makes ordering hassle-free. No apps needed, just a message away.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shop Section -->
+<section id="shop" class="shop">
+    <div class="container">
+        <h2>Our Menu</h2>
+        <div class="product-grid">
+
+            <!-- Kota -->
+            <div class="card" data-product="Kota" data-price="45">
+                <div class="card-image">
+                    <img src="images/kota.jpg" alt="Kota">
+                    <div class="card-overlay">Delicious & Filling</div>
+                </div>
+                <div class="card-content">
+                    <h3>Full House Kota</h3>
+                    <p class="price">R45</p>
+                    <p class="description">A delicious kota filled with Russian, egg, chips and sauce.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Kota', 45)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Burger Special -->
+            <div class="card" data-product="Burger Special" data-price="55">
+                <div class="card-image">
+                    <img src="images/burger.jpg" alt="Burger Special">
+                    <div class="card-overlay">Fresh & Juicy</div>
+                </div>
+                <div class="card-content">
+                    <h3>Burger Special</h3>
+                    <p class="price">R55</p>
+                    <p class="description">Russian and Cheese Burger.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Burger Special', 55)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 10 Winglets -->
+            <div class="card" data-product="10 Winglets & Chips" data-price="78">
+                <div class="card-image">
+                    <img src="images/winglets.jpg" alt="10 Winglets and Chips">
+                    <div class="card-overlay">Crispy & Golden</div>
+                </div>
+                <div class="card-content">
+                    <h3>10 Winglets & Chips</h3>
+                    <p class="price">R78</p>
+                    <p class="description">Crispy glazed winglets served with golden fries.</p>
+                    <button class="btn-add-cart" onclick="addToCart('10 Winglets & Chips', 78)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- 6 Winglets -->
+            <div class="card" data-product="6 Winglets & Chips" data-price="45">
+                <div class="card-image">
+                    <img src="images/winglets.jpg" alt="6 Winglets and Chips">
+                    <div class="card-overlay">Perfect Portion</div>
+                </div>
+                <div class="card-content">
+                    <h3>6 Winglets & Chips</h3>
+                    <p class="price">R45</p>
+                    <p class="description">Perfect portion of crispy winglets and fries.</p>
+                    <button class="btn-add-cart" onclick="addToCart('6 Winglets & Chips', 45)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Russian Chips & Bread -->
+            <div class="card" data-product="Russian, Chips & Bread" data-price="37">
+                <div class="card-image">
+                    <img src="images/russian.jpg" alt="Russian Chips and Bread">
+                    <div class="card-overlay">Savory Delight</div>
+                </div>
+                <div class="card-content">
+                    <h3>Russian, Chips & Bread</h3>
+                    <p class="price">R37</p>
+                    <p class="description">Grilled Russian sausage served with chips and fresh bread.</p>
+                    <button class="btn-add-cart" onclick="addToCart('Russian, Chips & Bread', 37)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Combo Deal -->
+            <div class="card" data-product="Combo Deal" data-price="70">
+                <div class="card-image">
+                    <img src="images/combo.jpg" alt="Combo Deal">
+                    <div class="card-overlay">Best Value</div>
+                </div>
+                <div class="card-content">
+                    <h3>Combo Deal</h3>
+                    <p class="price">R70</p>
+                    <p class="description">Cheese Burger + 3 Winglets + Chips</p>
+                    <button class="btn-add-cart" onclick="addToCart('Combo Deal', 70)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Us Section -->
+<section id="why-us" class="why-us">
+    <div class="container">
+        <h2>Why Choose The Food Hub?</h2>
+        <div class="why-us-grid">
+            <div class="why-card">
+                <div class="why-icon">😋</div>
+                <h3>Unbeatable Taste</h3>
+                <p>Our secret recipes and premium ingredients create flavors you won't find anywhere else in town.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⏱️</div>
+                <h3>Lightning Fast</h3>
+                <p>Order via WhatsApp and enjoy your meal in minutes. Speed without compromising quality.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">💸</div>
+                <h3>Unbeatable Prices</h3>
+                <p>Get premium street food at affordable prices. More food, more value, more savings.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">❤️</div>
+                <h3>Made with Love</h3>
+                <p>Every meal is prepared with care and passion. We treat your order like our own meal.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🔥</div>
+                <h3>Always Fresh</h3>
+                <p>We prepare food fresh to order. No stored inventory, just fresh ingredients every time.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🤝</div>
+                <h3>Friendly Service</h3>
+                <p>Our team is always ready to help. Friendly, professional, and customer-focused service.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get in Touch Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <div class="contact-form-section">
+                <h3>Send us a Message</h3>
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info-section">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Address</h4>
+                        <p>SPU Central Campus<br>Next to the Sports Ground</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+27738314327">+27 73831 4327</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/27738314327" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Open Daily<br>10:00 AM - 7PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shopping Cart Modal -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: R<span id="cartTotal">0</span></strong>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">Proceed to WhatsApp</button>
+            <button class="btn-continue" onclick="toggleCart()">Continue Shopping</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 The Food Hub. All rights reserved. | Fast Food Delivered Fresh to You</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
